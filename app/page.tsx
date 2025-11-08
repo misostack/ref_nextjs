@@ -1,9 +1,19 @@
+import HelloClientComponent from "@/components/clients/hello.client.component";
+import HelloServerComponent from "@/components/servers/hello.server.component";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <div>
+          <h2>Server Components</h2>
+          <HelloServerComponent />
+        </div>
+        <div>
+          <h2>Client Components</h2>
+          <HelloClientComponent />
+        </div>
         <Image
           className="dark:invert"
           src="/next.svg"

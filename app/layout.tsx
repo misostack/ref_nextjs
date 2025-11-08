@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { PRIVATE_ENV_VARS, PUBLIC_ENV_VARS } from "@/libs/environment";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,12 +25,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { APP_VERSION } = PRIVATE_ENV_VARS;
+  const { NEXT_PUBLIC_APP_NAME } = PUBLIC_ENV_VARS;
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer>
+          <p className="text-center">
+            {NEXT_PUBLIC_APP_NAME} - v{APP_VERSION}
+          </p>
+        </footer>
       </body>
     </html>
   );

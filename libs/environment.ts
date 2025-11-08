@@ -1,0 +1,9 @@
+const PRIVATE_ENV_VARS = {
+  APP_VERSION: process.env.APP_VERSION,
+};
+
+const PUBLIC_ENV_VARS = {
+  NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
+};
+
+export { PRIVATE_ENV_VARS, PUBLIC_ENV_VARS };

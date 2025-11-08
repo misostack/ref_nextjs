@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found",
+    "backToHome": "Back to home"
+  }
+
+}

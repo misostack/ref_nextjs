@@ -1,0 +1,10 @@
+{
+  "HomePage": {
+    "title": "Xin chào thế giới!"
+  },
+  "NotFoundPage": {
+    "description": "Vui lòng kiểm tra lại thanh địa chỉ trình duyệt hoặc sử dụng điều hướng để đến một trang đã biết.",
+    "title": "Không tìm thấy trang",
+    "backToHome": "Quay về trang chủ"
+  }
+}

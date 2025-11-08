@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { PRIVATE_ENV_VARS, PUBLIC_ENV_VARS } from "@/libs/environment";
-
 import "./globals.css";
+import { APP_VERSION, NEXT_PUBLIC_APP_NAME } from "@/env";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { APP_VERSION } = PRIVATE_ENV_VARS;
-  const { NEXT_PUBLIC_APP_NAME } = PUBLIC_ENV_VARS;
   return (
     <html lang="en">
       <body

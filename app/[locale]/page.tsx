@@ -1,5 +1,6 @@
 import HelloClientComponent from "@/components/clients/hello.client.component";
 import PageLayout from "@/components/PageLayout";
+import ProductImageBlock from "@/components/product/ProductImage.Block";
 import HelloServerComponent from "@/components/servers/hello.server.component";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -10,8 +11,14 @@ export default function Home() {
 
   return (
     <PageLayout>
-      <div className="flex items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-        <main className="flex w-full max-w-3xl flex-col items-center justify-between px-16 bg-white dark:bg-black sm:items-start">
+      <div className="min-h-screen">
+        <div className="flex flex-col">
+          <div className="shrink bg-amber-200">Line 1</div>
+          <div className="shrink">
+            <ProductImageBlock />
+          </div>
+        </div>
+        <main className="flex w-full flex-col items-center justify-between px-16 bg-white dark:bg-black sm:items-start">
           <div className="flex space-x-4">
             <Link
               className="text-blue-500 hover:underline"
